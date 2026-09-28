@@ -1,0 +1,16 @@
+class BookPages:
+    def __init__(self, pages):
+        self.pages = pages
+
+    def __str__(self):
+        return str(self.pages) + " pages"
+
+    def __add__(self, other):
+        return BookPages(self.pages + other.pages)
+
+
+book1 = BookPages(120)
+book2 = BookPages(85)
+
+print(book1)
+print(book1 + book2)
